@@ -21,11 +21,12 @@ function generatePassword() {
     var passwordLength = window.prompt("How many characters would you like your password to be. Choose a number between 8 and 128");
 
     // making passwordLength into a int
-    var newPass = newInt(passwordLength);
+    var newPass = parseInt(passwordLength);
 
     //checks condition of int value from the entered value. Then returns to the function above if number is not within the parameters
+    // calls back to the function even if they click "cancel"
     if (newPass < 8 || newPass > 128 || !newPass) {
-      window.alert("You must enter a vlaid number. Try again please.");
+      window.alert("You must enter a valid number. Try again please.");
       return generatePassword();
 
     }
@@ -60,6 +61,12 @@ if (symbolsPrompt) {
 
 console.log(infoArray);
 
+
+// password array function
+function passwordGen(){
+
+  // need to create forloops below...
+}
 
 
 // Get references to the #generate element
