@@ -1,5 +1,16 @@
 // Assignment code here
 
+var randomNumber = function(min,max){
+  var value = Math.floor(Math.random() * (max - min));
+  return value;
+}
+
+// Variables
+
+var Lowercases = [];
+var Uppercases =[];
+var Numbers =[];
+var Symbol =[];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
