@@ -1,7 +1,7 @@
 // Assignment code here
 
 var randomNumber = function(min,max){
-  var value = Math.floor(Math.random() * (max - min));
+  var value = Math.floor(Math.random() * (max - min + 1) + min);
   return value;
 }
 
@@ -10,7 +10,7 @@ var randomNumber = function(min,max){
 var Lowercases = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var Uppercases =["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var Numbers =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var Symbol =["!", "$", "#", "@", "%", "^", "&", "*", "(", ")", "-", "+", ";", "'", ",", ".", "/", "?", "~"];
+var Symbols =["!", "$", "#", "@", "%", "^", "&", "*", "(", ")", "-", "+", ";", "'", ",", ".", "/", "?", "~"];
 
 
 // Generator function
@@ -40,23 +40,25 @@ if (lowercasesPrompt) {
   infoArray = infoArray.concat(Lowercases);
 }
 
-var lowercasesPrompt = window.confirm("Would you like lowercases in your password?");
+var uppercasesPrompt = window.confirm("Would you like uppercases in your password?");
 if (lowercasesPrompt) {
   // if this is true, add characters into the infoArray
-  infoArray = infoArray.concat(Lowercases);
+  infoArray = infoArray.concat(Uppercases);
 }
 
-var lowercasesPrompt = window.confirm("Would you like lowercases in your password?");
-if (lowercasesPrompt) {
+var numbersPrompt = window.confirm("Would you like numbers in your password?");
+if (numbersPrompt) {
   // if this is true, add characters into the infoArray
-  infoArray = infoArray.concat(Lowercases);
+  infoArray = infoArray.concat(Numbers);
 }
 
-var lowercasesPrompt = window.confirm("Would you like lowercases in your password?");
-if (lowercasesPrompt) {
+var symbolsPrompt = window.confirm("Would you like symbols in your password?");
+if (symbolsPrompt) {
   // if this is true, add characters into the infoArray
-  infoArray = infoArray.concat(Lowercases);
+  infoArray = infoArray.concat(Symbols);
 }
+
+console.log(infoArray);
 
 
 
