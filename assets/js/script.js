@@ -27,9 +27,38 @@ function generatePassword() {
     if (newPass < 8 || newPass > 128 || !newPass) {
       window.alert("You must enter a vlaid number. Try again please.");
       return generatePassword();
-      
+
     }
 }
+
+// filler array
+var infoArray = [];
+
+var lowercasesPrompt = window.confirm("Would you like lowercases in your password?");
+if (lowercasesPrompt) {
+  // if this is true, add characters into the infoArray
+  infoArray = infoArray.concat(Lowercases);
+}
+
+var lowercasesPrompt = window.confirm("Would you like lowercases in your password?");
+if (lowercasesPrompt) {
+  // if this is true, add characters into the infoArray
+  infoArray = infoArray.concat(Lowercases);
+}
+
+var lowercasesPrompt = window.confirm("Would you like lowercases in your password?");
+if (lowercasesPrompt) {
+  // if this is true, add characters into the infoArray
+  infoArray = infoArray.concat(Lowercases);
+}
+
+var lowercasesPrompt = window.confirm("Would you like lowercases in your password?");
+if (lowercasesPrompt) {
+  // if this is true, add characters into the infoArray
+  infoArray = infoArray.concat(Lowercases);
+}
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
