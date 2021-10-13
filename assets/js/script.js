@@ -66,13 +66,26 @@ var realPass = [];
 // password array function
 function passwordGen(){
 
-  // need to create forloops below...
+  // Forloop for making the password with each character
 
   for (let i=0; i < passwordLength; i++) {
     var xChar = randomNumber(0,infoArray.length-1);
       realPass.push(infoArray[xChar]);
   }
   
+  // Boolean to check if info given matches in the passwordGen
+  var boolInfo = false;
+  if (lowercasesPrompt) {
+    for (let i=0; i < Lowercases.length && boolInfo == false; i++) {
+      boolInfo = realPass.includes(Lowercases[i])
+    }
+      if (boolInfo == false) {
+        return passwordGen();
+      }
+      return !boolInfo;
+  }
+
+
 }
 
 
