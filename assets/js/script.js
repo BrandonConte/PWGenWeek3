@@ -59,7 +59,7 @@ if (symbolsPrompt) {
   infoArray = infoArray.concat(Symbols);
 }
 
-console.log(infoArray);
+// console.log(infoArray);
 
 var realPass = [];
 
