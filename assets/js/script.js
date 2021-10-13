@@ -76,7 +76,7 @@ function passwordGen(){
   // Boolean to check if info given matches in the passwordGen
   var boolInfo = false;
   if (lowercasesPrompt) {
-    for (let i=0; i < Lowercases.length && boolInfo == false; i++) {
+    for (let i=0; i < Lowercases.length && boolInfo === false; i++) {
       boolInfo = realPass.includes(Lowercases[i])
     }
       if (boolInfo == false) {
@@ -87,7 +87,7 @@ function passwordGen(){
 
   var boolInfo = false;
   if (uppercasesPrompt) {
-    for (let i=0; i < Uppercases.length && boolInfo == false; i++) {
+    for (let i=0; i < Uppercases.length && boolInfo === false; i++) {
       boolInfo = realPass.includes(Uppercases[i])
     }
       if (boolInfo == false) {
@@ -98,7 +98,7 @@ function passwordGen(){
 
   var boolInfo = false;
   if (numbersPrompt) {
-    for (let i=0; i < Numbers.length && boolInfo == false; i++) {
+    for (let i=0; i < Numbers.length && boolInfo === false; i++) {
       boolInfo = realPass.includes(Numbers[i])
     }
       if (boolInfo == false) {
@@ -109,13 +109,14 @@ function passwordGen(){
 
   var boolInfo = false;
   if (symbolsPrompt) {
-    for (let i=0; i < Symbols.length && boolInfo == false; i++) {
+    for (let i=0; i < Symbols.length && boolInfo === false; i++) {
       boolInfo = realPass.includes(Symbols[i])
     }
       if (boolInfo == false) {
         return passwordGen();
       }
   }
+  
   console.log(realPass);
 passwordGen();
 return(realPass.join(""));
