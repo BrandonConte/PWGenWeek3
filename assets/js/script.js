@@ -85,8 +85,43 @@ function passwordGen(){
       return !boolInfo;
   }
 
+  var boolInfo = false;
+  if (uppercasesPrompt) {
+    for (let i=0; i < Uppercases.length && boolInfo == false; i++) {
+      boolInfo = realPass.includes(Uppercases[i])
+    }
+      if (boolInfo == false) {
+        return passwordGen();
+      }
+      return !boolInfo;
+  }
 
+  var boolInfo = false;
+  if (numbersPrompt) {
+    for (let i=0; i < Numbers.length && boolInfo == false; i++) {
+      boolInfo = realPass.includes(Numbers[i])
+    }
+      if (boolInfo == false) {
+        return passwordGen();
+      }
+      return !boolInfo;
+  }
+
+  var boolInfo = false;
+  if (symbolsPrompt) {
+    for (let i=0; i < Symbols.length && boolInfo == false; i++) {
+      boolInfo = realPass.includes(Symbols[i])
+    }
+      if (boolInfo == false) {
+        return passwordGen();
+      }
+  }
+  console.log(realPass);
+passwordGen();
+return(realPass.join(""));
 }
+
+
 
 
 // Get references to the #generate element
