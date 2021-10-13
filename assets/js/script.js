@@ -61,11 +61,18 @@ if (symbolsPrompt) {
 
 console.log(infoArray);
 
+var realPass = [];
 
 // password array function
 function passwordGen(){
 
   // need to create forloops below...
+
+  for (let i=0; i < passwordLength; i++) {
+    var xChar = randomNumber(0,infoArray.length-1);
+      realPass.push(infoArray[xChar]);
+  }
+  
 }
 
 
