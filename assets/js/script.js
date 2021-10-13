@@ -30,7 +30,7 @@ function generatePassword() {
       return generatePassword();
 
     }
-}
+
 
 // filler array
 var infoArray = [];
@@ -116,6 +116,7 @@ function passwordGen(){
         return passwordGen();
       }
   }
+}
   
 console.log(realPass);
 passwordGen();
